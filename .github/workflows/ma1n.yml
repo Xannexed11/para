@@ -13,4 +13,8 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ${{ github.actor }} created commit:
-           https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6a9tblnnjieHj3miYxgzQmt7pSi8sd_bTXg&usqp=CAU
+            Commit message: ${{ github.event.commits[0].message }}
+            
+            Repository: ${{ github.repository }}
+            
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
