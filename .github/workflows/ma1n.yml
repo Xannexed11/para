@@ -1,4 +1,12 @@
-- uses: actions/checkout@master
+name: telegram message
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@master
 - name: send photo message
   uses: appleboy/telegram-action@master
   with:
